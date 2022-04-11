@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/assets/img/bgif.gif) no-repeat center;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+
+.calculatrice{
+    /* background-color: rgb(61, 210, 230); */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+    /* box-shadow: 0 5px black; */
+    width: 375px;
+}
+
+
+
+.ecran{
+    min-width: 100%;
+    min-height: 100px;
+    height: auto;
+    background-color: rgba(200, 201, 233, 0.87);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 40px;
+    word-break: break-all;
+}
+
+.touches{
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows:repeat(5, 80px);
+    grid-gap: 7px;
+}
+
+button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: azure;
+    box-shadow: 0 3px #a8a8a8;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+button:active{
+    box-shadow: 0 1px #bfc39481;
+    transform: translateY(3px);
+}
+
+button:hover{
+    background: rgb(165, 164, 164);
+    transition: ease-in-out 0.25s;
+}
+
+button[data-key="8"] {
+    grid-column: span 2;
+    background-color: rgb(246, 214, 72);
+
+}
+
+button[data-key="13"]{
+    grid-column: span 2;
+    background-color: rgba(251, 79, 79, 0.842);
+}
+
+.mouse{
+    border: 3px solid rgb(187, 255, 110);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    transition: ease 0.05s;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    background: url(/assets/img/einstein.jpg);
+    background-size: cover;
+}
