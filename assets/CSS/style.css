@@ -13,6 +13,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+        background: rgb(38,30,172);
+background: linear-gradient(270deg, rgba(38,30,172,0.7119048302914917) 15%, rgba(71,71,212,1) 83%, rgba(0,212,255,1) 100%);
     background: url(/assets/img/bgif.gif) no-repeat center;
     background-size: cover;
     overflow-y: hidden;
