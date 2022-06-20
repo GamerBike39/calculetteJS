@@ -39,6 +39,7 @@ function calculer() {
   if (buttonText === "=") {
     result.innerText = eval(output.innerText);
     //  faille XSS Possible Cross-site scripting (XSS) est une faille de sécurité qui permet à un attaquant d'injecter dans un site web un code client malveillant. Ce code est exécuté par les victimes et permet aux attaquants de contourner les contrôles d'accès et d'usurper l'identité des utilisateurs
+
     result.style.animation = "big 0.2s ease-in-out";
     output.style.animation = "small 0.2s ease-in-out";
     result.style.animationFillMode = "forwards";
@@ -57,6 +58,8 @@ window.addEventListener("error", () => {
   setTimeout(() => {
     toucheReload.classList.remove("clignote");
     ici.classList.add("display");
+    result.textContent = "";
+    output.textContent = "";
   }, 3000);
 });
 
