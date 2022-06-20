@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Caveat', cursive;
+    font-family: 'Press Start 2P', cursive;
 }
 
 body{
@@ -15,9 +15,8 @@ body{
     align-items: center;
     background: rgb(38,30,172);
 background: linear-gradient(270deg, rgba(38,30,172,0.7119048302914917) 15%, rgba(71,71,212,1) 83%, rgba(0,212,255,1) 100%);
-    background: url(/assets/img/bgif.gif) no-repeat center;
+    background: url(../img/bgif.gif) no-repeat center;
     background-size: cover;
-
     overflow-y: hidden;
     overflow-x: hidden;
     cursor: none;
@@ -25,12 +24,11 @@ background: linear-gradient(270deg, rgba(38,30,172,0.7119048302914917) 15%, rgba
 
 
 .calculatrice{
-    /* background-color: rgb(61, 210, 230); */
+    background: linear-gradient(270deg, rgba(167, 163, 244, 0.712) 15%, rgb(167, 167, 226) 83%,rgb(210, 213, 213)) 100%;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     padding: 15px;
-    /* box-shadow: 0 5px black; */
     width: 375px;
 }
 
@@ -50,6 +48,11 @@ background: linear-gradient(270deg, rgba(38,30,172,0.7119048302914917) 15%, rgba
     font-size: 40px;
     word-break: break-all;
 }
+.ecranFeu{
+    background: url(https://acegif.com/wp-content/gifs/fire-102.gif);
+    background-size: cover;
+    background-position: bottom;
+}
 
 .touches{
     display: grid;
@@ -58,12 +61,12 @@ background: linear-gradient(270deg, rgba(38,30,172,0.7119048302914917) 15%, rgba
     grid-gap: 7px;
 }
 
+
 button{
     border: none;
     outline: none;
     border-radius: 5px;
     background-color: azure;
-    box-shadow: 0 3px #a8a8a8;
     font-size: 2rem;
     cursor: pointer;
 }
@@ -73,20 +76,25 @@ button:active{
     transform: translateY(3px);
 }
 
-button:hover{
-    background: rgb(165, 164, 164);
-    transition: ease-in-out 0.25s;
-}
-
 button[data-key="8"] {
     grid-column: span 2;
-    background-color: rgb(246, 214, 72);
+  
+    background-color: rgba(251, 79, 79, 0.842);
 
 }
 
 button[data-key="13"]{
     grid-column: span 2;
-    background-color: rgba(251, 79, 79, 0.842);
+    background-color: rgb(246, 214, 72);
+    
+}
+button[data-key="14"]{
+    grid-column: span 2;
+    
+}
+
+button[data-key="46"]{
+    font-size: 1.5rem;
 }
 
 .mouse{
@@ -100,6 +108,34 @@ button[data-key="13"]{
     transition: ease 0.05s;
     transform: translate(-50%,-50%);
     z-index: -1;
-    background: url(/assets/img/einstein.jpg);
+    background: url(../img/einstein.jpg) no-repeat center;
     background-size: cover;
+}
+
+.blagueNon{
+    position : inherit;
+}
+.blague{
+    position : absolute;
+}
+.pasVoir{
+    display: none;
+}
+
+.gaucheDroite{
+    animation: reload 1s;
+}
+@keyframes reload{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(5%);
+    }
+    50%{
+        transform: translateX(-5%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }

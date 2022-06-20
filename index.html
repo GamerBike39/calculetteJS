@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculette</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 
@@ -14,9 +17,8 @@
     <div class="calculatrice">
         <div class="ecran"></div>
         <div class="touches">
-            <button data-key="8" class="bouton">AC</button>
-            <button data-key="46" class="bouton">del</button>
-            <!-- <button data-key="169" class="bouton">lol</button> -->
+            <button data-key="8" class="bouton ac">AC</button>
+            <button data-key="46" class="bouton del">del</button>
             <button data-key="111" class="bouton">/</button>
             <button data-key="103" class="bouton">7</button>
             <button data-key="104" class="bouton">8</button>
@@ -32,14 +34,18 @@
             <button data-key="107" class="bouton">+</button>
             <button data-key="96" class="bouton">0</button>
             <button data-key="110" class="bouton">.</button>
-            <button data-key="13" class="bouton">=</button>
+            <button data-key="13" class="bouton egal">=</button>
+            <button data-key="14" class="pasVoir"><img src="assets/img/AHAH.svg" alt=""></button>
         </div>
 
+        <audio class="sound" src="assets/img/reload.aac"></audio>
+      
 
 
 
 
         <script src="assets/JS/calc.js"></script>
+        <!-- <script src="assets/JS/snake.js"></script> -->
 </body>
 
 </html>
