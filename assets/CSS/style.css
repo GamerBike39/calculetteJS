@@ -47,7 +47,13 @@ background: linear-gradient(270deg, rgba(38,30,172,0.7119048302914917) 15%, rgba
     padding: 5px;
     font-size: 40px;
     word-break: break-all;
+    font-size: 18px;
+   
 }
+.output{
+    word-break: break-all;
+}
+
 .ecranFeu{
     background: url(https://acegif.com/wp-content/gifs/fire-102.gif);
     background-size: cover;
@@ -76,24 +82,24 @@ button:active{
     transform: translateY(3px);
 }
 
-button[data-key="8"] {
+button.n8 {
     grid-column: span 2;
   
     background-color: rgba(251, 79, 79, 0.842);
 
 }
 
-button[data-key="13"]{
+button.n13{
     grid-column: span 2;
     background-color: rgb(246, 214, 72);
     
 }
-button[data-key="14"]{
+button.n14{
     grid-column: span 2;
     
 }
 
-button[data-key="46"]{
+button.n46{
     font-size: 1.5rem;
 }
 
@@ -139,3 +145,54 @@ button[data-key="46"]{
         transform: translateX(0%);
     }
 }
+
+.output{
+    font-size: 28px;
+    padding: 25px;
+}
+
+@keyframes big{
+    0%{
+        font-size: 18px;
+    }
+    100%{
+        font-size: 30px;
+    }
+}
+
+@keyframes small{
+    0%{
+        font-size: 28px;
+    }
+    100%{
+        font-size: 18px;
+    }
+}
+
+.clignote {
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+ }
+ @keyframes clignoter {
+   0%   { opacity:1; }
+   40%   {opacity:0; }
+   100% { opacity:1; }
+ }
+
+ .ici{
+    position: absolute;
+    font-size: 45px;
+    top: 36%;
+    left: 37%;
+ }
+
+ .display{
+    display: none;
+ }
+
+ .retourne{
+    transform: translateX(180%);
+
+ }

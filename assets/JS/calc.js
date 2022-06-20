@@ -1,10 +1,11 @@
 const touches = [...document.querySelectorAll(".bouton")];
+const keys = document.querySelectorAll("button");
 const ecran = document.querySelector(".ecran");
 const blague = document.querySelector(".egal");
 const pasVoir = document.querySelector(".pasVoir");
 // renvoi une node list, ce n'est pas un tableau. on le transforme en tableau avec l'utilisation de  [... ]
 
-// la fonction map() prend chaque élément d'un tableau, fait quelque chose à cet élément (fonction callbak : une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action. L' exemple ci-dessus est un rappel synchrone et il est exécuté immédiatement) et retourne le résulat sous forme d'un nouveau tableau (ici dans la variable nouveauTab)
+// la fonction map() prend chaque élément d'un tableau, fait quelque chose à cet élément (fonction callbak : une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action. Et retourne le résulat sous forme d'un nouveau tableau (ici dans la variable nouveauTab)
 // const nouveauTab = taleau.map( element => faireQqch(element));
 const listeKeycode = touches.map((touche) => touche.dataset.key);
 console.log(listeKeycode);
@@ -13,12 +14,13 @@ console.log(listeKeycode);
 document.addEventListener("keydown", (e) => {
   const valeur = e.keyCode.toString();
   calculer(valeur);
+  console.log(valeur, typeof valeur);
 });
 
 document.addEventListener("click", (e) => {
   const valeur = e.target.dataset.key;
   calculer(valeur);
-  // console.log(valeur, typeof valeur)
+  console.log(valeur, typeof valeur);
 });
 
 //fonction calculer
@@ -68,8 +70,8 @@ blague.addEventListener("click", () => {
   blague.classList.toggle("blagueNon");
 });
 
-// effets sonore sur les touches
-var reload = document.querySelector(".sound");
+// effet sonore et visuelle sur la touche AC
+let reload = document.querySelector(".sound");
 reload.volume = 0.5;
 
 toucheReload = document.querySelector(".ac");
@@ -82,5 +84,3 @@ toucheReload.addEventListener("click", () => {
     ecran.classList.remove("ecranFeu");
   }, 700);
 });
-
-console.log(ecran);
