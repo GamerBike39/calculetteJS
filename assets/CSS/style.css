@@ -170,7 +170,7 @@ button.n46{
 }
 
 .clignote {
-    animation-duration: .8s;
+    animation-duration: .5s;
     animation-name: clignoter;
     animation-iteration-count: infinite;
     transition: none;
@@ -193,6 +193,59 @@ button.n46{
  }
 
  .retourne{
-    transform: translateX(180%);
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+ }
+ .retourneBonsens{
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+ }
 
+ .cheatcode{
+    display :flex;
+    justify-content: space-around;
+    width: 200px;
+    position: fixed;
+    top: 395px;
+    left: 268px;
+    color: azure;
+ }
+
+ .cheatcodeS{
+    display :flex;
+    justify-content: space-around;
+    width: 200px;
+    position: fixed;
+    top: 112px;
+    right: 282px;
+    color: azure;
+    transform: rotate(45deg);
+ }
+
+ .cheatcode p:nth-last-child(1){
+    font-size: 2rem;
+ }
+ .cheatcodeS p:nth-last-child(1){
+    font-size: 2rem;
+    transform: translateY(-25%);
+ }
+
+ .grossir{
+    font-size: 8rem !important;
+    transition: all 0.5s ease-in-out;
+    animation: rotate 5s ease-in-out;
+ }
+
+ @keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ }
+
+ .changeColor{
+    color: rgb(238, 220, 63);
+    transition: all 0.5s ease-in-out;
  }
